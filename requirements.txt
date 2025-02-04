@@ -1,23 +1,14 @@
-# Core Dependencies
+# Core dependencies
 flask
-python-dotenv
-telegraf
-beautifulsoup4
-lxml
-pandas
+requests
 
-# AI/NLP
-openai
-nltk
-transformers
+# Development dependencies
+pytest
+black
+flake8
+isort
+pre-commit
 
-# Security
-cryptography
-pyjwt
-
-# Task Automation
-apscheduler
-
-# Logging
-loguru
-colorlog
+# Deployment dependencies
+gunicorn
+uvicorn
