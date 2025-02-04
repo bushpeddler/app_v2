@@ -1,0 +1,17 @@
+- engine/
+
+    - time_engine.py (from Branch: time-manipulation-engine)
+
+Place in src/engine. This file handles time manipulation mechanics.
+
+    - combat_engine.py (from Branch: combat-system)
+
+Place in src/engine. Manages combat logic and entity interactions.
+
+    - puzzle_manager.py (from Branch: puzzle-system)
+
+Place in src/engine. Deals with puzzle mechanics in the game.
+
+    - resource_manager.py (from Branch: resource-management)
+
+Place in src/engine. Manages in-game resources like temporal energy and currency.

@@ -1,0 +1,14 @@
+- world/
+    - asset_table.py (from Branch: asset-management)
+
+Place in src/world. Manages game assets akin to a periodic table for elements.
+
+
+    - world_manager.py (from Branch: world-and-narrative)
+
+Place in src/world. Manages the game world and level loading.
+
+
+    - narrative_engine.py (from Branch: world-and-narrative)
+
+Also in src/world. Handles the narrative and branching storylines.

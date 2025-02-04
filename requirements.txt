@@ -1,0 +1,61 @@
+# =============================
+# Arcane Empires Bot Dependencies
+# =============================
+
+# Core Bot Frameworks
+telegraf                # Telegram bot framework
+python-telegram-bot     # Python library for Telegram bot integration
+
+# Environment & Configuration
+python-dotenv           # Load environment variables from .env file
+
+# Web & API Handling
+requests                # Handle API requests (e.g., fetching game data)
+flask                   # Lightweight web framework (for bot commands or dashboards)
+fastapi                 # Alternative API framework (for performance)
+
+# Database Support (Choose one based on project needs)
+sqlite3                 # Lightweight database for storing bot state
+sqlalchemy              # ORM for interacting with relational databases
+redis                   # In-memory database (for caching game states)
+
+# Logging & Debugging
+loguru                  # Advanced logging framework
+colorlog                # Adds color to logging output
+
+# Data Processing & Parsing
+pandas                  # For handling structured game data
+beautifulsoup4          # Web scraping (if game mechanics need external data)
+lxml                    # Fast XML/HTML parser (useful for certain APIs)
+
+# AI & NLP (Optional Enhancements)
+openai                  # OpenAI API for generating dynamic game responses
+nltk                    # Natural Language Toolkit (for chat-based features)
+transformers            # AI-based text processing (if using LLMs in the game)
+
+# Security
+cryptography            # Secure token storage and encryption
+pyjwt                   # Handling JSON Web Tokens (if needed for authentication)
+
+# Task Automation & Scheduling
+apscheduler             # Automate game events and background tasks
+
+# =============================
+# Development & Testing Extras
+# =============================
+[dev]
+pytest                  # Testing framework
+black                   # Code formatter (for consistent styling)
+isort                   # Auto-sorts Python imports
+flake8                  # Linter for Python code quality
+mypy                    # Type checking for Python
+pre-commit              # Run linting & formatting before committing
+
+# =============================
+# Deployment & Monitoring Extras
+# =============================
+[deploy]
+gunicorn                # WSGI server for running Flask/FastAPI in production
+uvicorn                 # ASGI server (for FastAPI-based projects)
+docker                  # For containerized deployments
+sentry-sdk              # Error tracking & monitoring

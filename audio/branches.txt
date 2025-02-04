@@ -1,0 +1,4 @@
+ - audio/
+    - audio_manager.py (from Branch: audio-and-visual)
+
+Place in src/audio. Manages audio playback for both music and sound effects.

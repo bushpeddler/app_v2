@@ -1,0 +1,39 @@
+# Combat Engine and Entity Definitions
+
+class Entity:
+    def __init__(self, name, health, attack, defense):
+        self.name = name
+        self.health = health
+        self.attack = attack
+        self.defense = defense
+
+    def take_damage(self, damage):
+        self.health -= damage
+        if self.health < 0:
+            self.health = 0
+
+class CombatEngine:
+    def __init__(self):
+        self.entities = []
+
+    def add_entity(self, entity):
+        self.entities.append(entity)
+
+    def calculate_damage(self, attacker, defender):
+        base_damage = attacker.attack - defender.defense
+        return max(base_damage, 1)
+
+    def engage_combat(self, attacker, defender):
+        damage = self.calculate_damage(attacker, defender)
+        defender.take_damage(damage)
+        return damage
+
+# Example usage:
+if __name__ == '__main__':
+    hero = Entity("Hero", 100, 20, 5)
+    monster = Entity("Monster", 80, 15, 3)
+    engine = CombatEngine()
+    engine.add_entity(hero)
+    engine.add_entity(monster)
+    dmg = engine.engage_combat(hero, monster)
+    print(f"{hero.name} dealt {dmg} damage to {monster.name}")

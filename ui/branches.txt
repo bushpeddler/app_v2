@@ -1,0 +1,6 @@
+- ui/
+    - hud.py (from Branch: user-interface)
+
+    - menu.py (from Branch: user-interface)
+
+- hud.py & menu.py: Both go in src/ui. These manage the user interface elements like the heads-up display and game menu.
