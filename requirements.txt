@@ -1,0 +1,23 @@
+# Core Dependencies
+flask
+python-dotenv
+telegraf
+beautifulsoup4
+lxml
+pandas
+
+# AI/NLP
+openai
+nltk
+transformers
+
+# Security
+cryptography
+pyjwt
+
+# Task Automation
+apscheduler
+
+# Logging
+loguru
+colorlog
