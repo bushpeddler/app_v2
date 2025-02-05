@@ -1,0 +1,66 @@
+# 🛠️ Arcane Empires: Cyberpunk Configuration
+game:
+  name: "Arcane Empires"
+  version: "1.0.0"
+  developer: "Cyberware Studios"
+  save_directory: "./saves/"
+  language: "en"
+  theme: "cyberpunk"  # Theme identifier for UI, sound, and narrative changes
+
+graphics:
+  resolution: "2560x1440"
+  fullscreen: true
+  v_sync: true
+  fps_limit: 120
+  color_mode: "neon_glow"  # Options: retro, neon_glow, realistic
+  ui_style: "holographic"  # UI overlay theme
+  particle_effects: "high"  # Controls effects like rain, smoke, fog
+
+physics:
+  enable_ragdoll: true
+  environmental_interaction: true  # Allows breaking/hacking objects
+  gravity_strength: 9.8  # Earth gravity, tweak for different environments
+  bullet_physics: "realistic"  # Options: arcade, realistic, sci-fi
+
+audio:
+  master_volume: 80
+  music_volume: 70
+  sfx_volume: 85
+  ambient_volume: 65
+  dialogue_volume: 75
+  mute: false
+  dynamic_audio: true  # Adjusts based on action intensity
+  radio_stations: ["Cyberwave FM", "Underground Byte", "Hacktunes"]
+
+controls:
+  move_up: "W"
+  move_down: "S"
+  move_left: "A"
+  move_right: "D"
+  action: "Space"
+  interact: "E"
+  menu: "Escape"
+  hack_mode: "Q"
+  scan_environment: "X"
+  quick_hack: "F"
+
+gameplay:
+  difficulty: "Adaptive"  # Options: Easy, Normal, Hard, Adaptive
+  auto_save: true
+  max_inventory_size: 100
+  enemy_ai_behavior: "cybernetic"  # Adaptive AI that learns from the player
+  hacking_mechanics: true  # Enables hacking modules
+  stealth_mode: true  # Allows for stealth-based gameplay
+  time_dilation: true  # Slow-motion abilities
+
+networking:
+  multiplayer_enabled: true
+  max_players: 8
+  server_ip: "127.0.0.1"
+  server_port: 8080
+  encryption_level: "AES-256"  # Cypherpunk-friendly security settings
+
+logging:
+  log_level: "DEBUG"
+  log_to_file: true
+  log_file: "logs/game_debug.log"

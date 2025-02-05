@@ -1,0 +1,46 @@
+# Arcane Empires Game Configuration
+
+game:
+  name: "Arcane Empires"
+  version: "1.0.0"
+  developer: "Your Studio Name"
+  save_directory: "./saves/"
+  language: "en"
+
+graphics:
+  resolution: "1920x1080"
+  fullscreen: true
+  v_sync: true
+  fps_limit: 60
+
+audio:
+  master_volume: 75
+  music_volume: 60
+  sfx_volume: 70
+  mute: false
+
+controls:
+  move_up: "W"
+  move_down: "S"
+  move_left: "A"
+  move_right: "D"
+  action: "Space"
+  interact: "E"
+  menu: "Escape"
+
+gameplay:
+  difficulty: "Normal"  # Options: Easy, Normal, Hard
+  auto_save: true
+  max_inventory_size: 50
+  enemy_ai_level: "Adaptive"  # Options: Basic, Normal, Adaptive
+
+networking:
+  multiplayer_enabled: true
+  max_players: 4
+  server_ip: "127.0.0.1"
+  server_port: 7777
+
+logging:
+  log_level: "INFO"  # Options: DEBUG, INFO, WARNING, ERROR
+  log_to_file: true
+  log_file: "logs/game.log"
