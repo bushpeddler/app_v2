@@ -1,5 +1,4 @@
 import time
-from settings_loader import CONFIG
 from engine.time_engine import TimeController
 from input.input_manager import InputManager
 from ui.hud import HUD
@@ -8,31 +7,12 @@ from world.world_manager import WorldManager
 from engine.resource_manager import ResourceManager
 
 def compute_delta_time(last_time):
-    """Calculates the time difference between frames."""
     current_time = time.time()
     delta = current_time - last_time
     return delta, current_time
 
 def main():
-    """Main entry point for Arcane Empires."""
-    print(f"⚡ Starting {CONFIG.get('game.title', 'Arcane Empires')} v{CONFIG.get('game.version', '1.0')}")
-
-    # Graphics Configuration
-    if CONFIG.get("graphics.fullscreen"):
-        print("[INFO] Running in Fullscreen Mode")
-    
-    # Multiplayer Configuration
-    if CONFIG.get("networking.enable_multiplayer"):
-        print(f"[INFO] Multiplayer Enabled | Max Players: {CONFIG.get('networking.max_players', 4)}")
-
-    # Cyberpunk Feature Checks
-    if CONFIG.get("gameplay.hacking_system"):
-        print("[INFO] Hacking Mechanics are ENABLED")
-
-    if CONFIG.get("world.dynamic_time_cycle"):
-        print("[INFO] Dynamic Day-Night Cycle ACTIVE")
-
-    # Initialize Core Components
+    # Initialize core components
     time_controller = TimeController()
     input_manager = InputManager()
     hud = HUD()
@@ -47,24 +27,45 @@ def main():
         # Compute elapsed time since last frame
         delta_time, last_time = compute_delta_time(last_time)
         
-        # Process User Input
+        # Process user input
         input_manager.process_input()
         
-        # Update Game State
+        # Update game state
         time_controller.update(delta_time)
         world_manager.update(delta_time)
         resource_manager.update(delta_time)
         
-        # Render UI Elements
+        # Render UI elements
         hud.render()
         menu.render()
 
-        # Exit Condition Based on User Input
+        # Exit condition based on user input
         if input_manager.quit_requested:
-            print("[INFO] Game Exit Requested. Shutting down...")
             game_running = False
 
-    print("[GAME SHUTDOWN]")
+if __name__ == '__main__':
+    main()
+    
+----
+
+from settings_loader import CONFIG
+
+def main():
+    print(f"Starting {CONFIG.get('game.name', 'Arcane Empires')} v{CONFIG.get('game.version', '1.0')}")
+    
+    if CONFIG.get("graphics.fullscreen"):
+        print("[INFO] Running in Fullscreen Mode")
+    
+    if CONFIG.get("networking.multiplayer_enabled"):
+        print("[INFO] Multiplayer Mode Enabled")
+
+    # Example usage of Cyberpunk features
+    if CONFIG.get("gameplay.hacking_mechanics"):
+        print("[INFO] Hacking Mechanics are ENABLED")
+    
+    # Start game loop (to be expanded)
+    print("[GAME STARTED]")
 
 if __name__ == "__main__":
     main()
+ 

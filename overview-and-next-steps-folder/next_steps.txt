@@ -1,0 +1,12 @@
+Would you like:
+	1.	Unit tests for main.py? (To validate input handling, AI logic, etc.)
+	2.	Auto-save system integration? (save_load.py to persist game state)
+	3.	Logging output to a file? (Store debug logs for AI behavior and system updates)
+	
+
+📌 Next Steps
+
+Would you like:
+	1.	Further expansions? (e.g., procedural city generation, economy simulation)
+	2.	In-game UI settings menu? (Modify config.yaml live in-game)
+	3.	Integration into gameplay scripts? (Ensure all mechanics load dynamically)

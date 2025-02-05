@@ -1,26 +1,29 @@
 # 🛠️ Arcane Empires: Cyberpunk Configuration
+
 game:
-  name: "Arcane Empires"
+  title: "Arcane Empires"
   version: "1.0.0"
   developer: "Cyberware Studios"
-  save_directory: "./saves/"
+  save_path: "./saves/"
   language: "en"
-  theme: "cyberpunk"  # Theme identifier for UI, sound, and narrative changes
+  theme: "cyberpunk"  # Defines UI, audio, and world interactions
 
 graphics:
   resolution: "2560x1440"
   fullscreen: true
   v_sync: true
-  fps_limit: 120
-  color_mode: "neon_glow"  # Options: retro, neon_glow, realistic
-  ui_style: "holographic"  # UI overlay theme
-  particle_effects: "high"  # Controls effects like rain, smoke, fog
+  frame_limit: 120
+  visual_style: "neon_glow"  # Options: retro, neon_glow, hyperrealistic
+  ui_design: "holographic"  # Overlay effect for HUD and menus
+  particle_density: "high"  # Controls visual effects like smoke, rain, fog
 
 physics:
-  enable_ragdoll: true
-  environmental_interaction: true  # Allows breaking/hacking objects
-  gravity_strength: 9.8  # Earth gravity, tweak for different environments
-  bullet_physics: "realistic"  # Options: arcade, realistic, sci-fi
+  ragdoll_physics: true
+  environmental_interaction: true  # Enables breaking/hacking objects
+  gravity_force: 9.8  # Default Earth gravity, tweak for altered environments
+  projectile_behavior: "realistic"  # Options: arcade, realistic, sci-fi
+  destructible_objects: true  # World elements can be damaged or hacked
+  vehicle_damage: true  # Applies realistic collision effects to vehicles
 
 audio:
   master_volume: 80
@@ -28,39 +31,72 @@ audio:
   sfx_volume: 85
   ambient_volume: 65
   dialogue_volume: 75
-  mute: false
-  dynamic_audio: true  # Adjusts based on action intensity
-  radio_stations: ["Cyberwave FM", "Underground Byte", "Hacktunes"]
+  mute_all: false
+  dynamic_audio: true  # Adjusts sound based on world activity
+  radio_stations: ["Cyberwave FM", "Underground Byte", "Hacktunes", "Neon Soundscapes"]
 
 controls:
-  move_up: "W"
-  move_down: "S"
-  move_left: "A"
-  move_right: "D"
-  action: "Space"
-  interact: "E"
-  menu: "Escape"
-  hack_mode: "Q"
-  scan_environment: "X"
-  quick_hack: "F"
+  movement:
+    up: "W"
+    down: "S"
+    left: "A"
+    right: "D"
+  actions:
+    interact: "E"
+    attack: "Space"
+    hack_mode: "Q"
+    scan: "X"
+    quick_hack: "F"
+  ui:
+    open_menu: "Escape"
+    inventory: "Tab"
 
 gameplay:
   difficulty: "Adaptive"  # Options: Easy, Normal, Hard, Adaptive
   auto_save: true
-  max_inventory_size: 100
-  enemy_ai_behavior: "cybernetic"  # Adaptive AI that learns from the player
-  hacking_mechanics: true  # Enables hacking modules
-  stealth_mode: true  # Allows for stealth-based gameplay
-  time_dilation: true  # Slow-motion abilities
+  inventory_limit: 100
+  enemy_ai: "cybernetic"  # Adaptive AI that evolves with player actions
+  hacking_system: true  # Enables digital warfare mechanics
+  stealth_mode: true  # Allows for non-lethal and silent playstyles
+  time_dilation: true  # Grants slow-motion abilities for enhanced reactions
+  reputation_system: true  # NPC and faction interactions change based on choices
 
 networking:
-  multiplayer_enabled: true
+  enable_multiplayer: true
   max_players: 8
-  server_ip: "127.0.0.1"
-  server_port: 8080
-  encryption_level: "AES-256"  # Cypherpunk-friendly security settings
+  server:
+    ip: "127.0.0.1"
+    port: 8080
+  encryption: "AES-256"  # Secure cypherpunk-friendly data transmission
 
 logging:
-  log_level: "DEBUG"
-  log_to_file: true
-  log_file: "logs/game_debug.log"
+  debug_level: "DEBUG"
+  save_logs: true
+  log_file: "logs/arcane_debug.log"
+
+ai:
+  intelligence_level: "predictive"  # Options: basic, reactive, predictive
+  voice_synthesis: true  # AI-generated voices for NPCs
+  emotional_adaptability: true  # NPCs react dynamically to player behavior
+  counter_hacking: "adaptive"  # Enemies develop resistance to hacking attempts
+
+world:
+  dynamic_time_cycle: true  # Day and night changes impact gameplay
+  weather_variability: true  # Includes neon rain, dust storms, smog, etc.
+  neon_reflections: true  # Enhances the cyberpunk aesthetic
+  city_population: "high"  # Determines NPC density and interactions
+  underground_market: true  # Allows black-market trading and item smuggling
+  corporate_control: ["NeonTek", "CyberSys", "VoidCorp"]  # Key power factions
+
+hacking:
+  remote_exploits: true  # Enables long-range system breaches
+  network_infiltration: true  # Engages in cyber warfare tactics
+  social_hacking: ["mind_control", "identity_cloning"]  # Allows psychological manipulation
+  cyber_augmentations: ["neural implant", "stealth mod", "memory rewrite"]
+  decryption_efficiency: "fast"  # Adjusts speed of codebreaking operations
+
+narrative:
+  dynamic_storylines: true  # Branching choices influence world events
+  adaptive_dialogue: true  # AI-generated conversations react to player decisions
+  faction_relationships: ["Anarchists", "Corporate Elite", "Cyber Renegades"]
+  player_legacy: true  # NPCs and the game world remember past actions
